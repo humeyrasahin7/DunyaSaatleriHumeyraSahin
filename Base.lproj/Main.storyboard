@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bFZ-5k-i2z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="yMw-Ht-jO0">
+            <objects>
+                <collectionViewController storyboardIdentifier="ViewController" title="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cB4-mI-enE" customClass="ViewController" customModule="DunyaSaatleriHumeyraSahin" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="prototypes" id="XSQ-AN-wHA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yUd-wo-c7y">
+                            <size key="itemSize" width="171" height="215"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClockCell" id="gU6-QS-ViR" customClass="ClockCell" customModule="DunyaSaatleriHumeyraSahin" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="171" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9NV-t0-gXU">
+                                    <rect key="frame" x="0.0" y="0.0" width="171" height="215"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVA-dc-cvc">
+                                            <rect key="frame" x="121" y="8" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76T-Cn-cGB">
+                                            <rect key="frame" x="47" y="173" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aC0-p7-J9W">
+                                            <rect key="frame" x="25" y="37" width="120" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="171" height="215"/>
+                                <connections>
+                                    <outlet property="cityNameLabel" destination="76T-Cn-cGB" id="a4X-NV-lvz"/>
+                                    <outlet property="clockImage" destination="aC0-p7-J9W" id="kZg-Dh-Svu"/>
+                                    <outlet property="timeDifferenceLabel" destination="xVA-dc-cvc" id="dRh-h4-F0F"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="cB4-mI-enE" id="aG6-cB-7Cr"/>
+                            <outlet property="delegate" destination="cB4-mI-enE" id="5Ol-IT-rTw"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="tYz-5t-KvA"/>
+                    <connections>
+                        <segue destination="OgP-ie-kgu" kind="push" identifier="toAddClockVC" id="qcF-ea-JBc"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8w-6u-LDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044.9275362318842" y="54.910714285714285"/>
+        </scene>
+        <!--Add Clock View Controller-->
+        <scene sceneID="peh-aB-eDa">
+            <objects>
+                <viewController id="OgP-ie-kgu" customClass="AddClockViewController" customModule="DunyaSaatleriHumeyraSahin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yr5-hn-ZSR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lTf-DG-Aft">
+                                <rect key="frame" x="92" y="143" width="230" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="Y4D-ag-xYk"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBJ-Zw-BOC">
+                                <rect key="frame" x="332" y="789" width="44" height="50"/>
+                                <rect key="contentStretch" x="0.45000000000000001" y="0.45000000000000001" width="0.84999999999999998" height="1"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="checkmark.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addTapped:" destination="OgP-ie-kgu" eventType="touchUpInside" id="g9e-oZ-hpe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBW-SF-UUz">
+                                <rect key="frame" x="280" y="789" width="44" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="xmark.circle" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="OgP-ie-kgu" eventType="touchUpInside" id="EW1-lI-2wN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFO-3C-XPs">
+                                <rect key="frame" x="92" y="481" width="230" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" title="saat" identifier="saat" id="qtE-22-lTm">
+                                    <menuOptions key="menuOptions" singleSelection="YES"/>
+                                    <children>
+                                        <command title="Kırmızı" id="Wb9-hc-Hu4"/>
+                                        <command title="Turuncu" id="xKb-dC-Z7H"/>
+                                        <command title="Sarı" id="O4y-qr-DJ5"/>
+                                        <command title="Yeşil" id="P2s-bs-c7O"/>
+                                        <command title="Mavi" id="Opu-iV-4w6" userLabel="Mavi"/>
+                                        <command title="Mor" id="WTP-Oz-BIa"/>
+                                        <command title="Siyah" id="YXP-9I-MfI" userLabel="Siyah"/>
+                                        <command title="Gri" id="1bY-XK-6vq"/>
+                                        <command title="Magenta" id="hv6-Vt-96z"/>
+                                        <command title="Cyan" id="TTA-Zy-p0a"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="saatRenk"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Srq-n7-3h8">
+                                <rect key="frame" x="92" y="543" width="230" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" title="yelkovan" identifier="yelkovan" id="X2r-5V-d26">
+                                    <menuOptions key="menuOptions" singleSelection="YES"/>
+                                    <children>
+                                        <command title="Yeşil" id="HFu-YJ-5bP"/>
+                                        <command title="Siyah" id="2HW-yI-o0j" userLabel="Siyah"/>
+                                        <command title="Magenta" id="0y9-vd-mU7"/>
+                                        <command title="Mavi" id="o0W-jP-Ask" userLabel="Mavi"/>
+                                        <command title="Turuncu" id="rHT-QZ-BKw"/>
+                                        <command title="Sarı" id="Nbe-Jk-q51"/>
+                                        <command title="Mor" id="8Jl-w4-uRj"/>
+                                        <command title="Kırmızı" id="Zjr-l0-gK3"/>
+                                        <command title="Gri" id="29l-nK-3HE"/>
+                                        <command title="Cyan" id="axe-UZ-9ke"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="yelkovanRenk"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bf-pu-274">
+                                <rect key="frame" x="92" y="609" width="230" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" title="sehir" identifier="sehir" id="Gne-Pf-oiQ">
+                                    <menuOptions key="menuOptions" singleSelection="YES"/>
+                                    <children>
+                                        <command title="Seul" id="TGg-UO-vCz"/>
+                                        <command title="İstanbul" id="zbf-eG-lfb"/>
+                                        <command title="Berlin" id="GXb-Oy-yr6"/>
+                                        <command title="Tokyo" id="Alf-KL-4Fa" userLabel="Mavi"/>
+                                        <command title="NYC" id="42G-t3-swR"/>
+                                        <command title="Vancouver" id="bhx-FA-fSa"/>
+                                        <command title="Lefkoşa" id="vEQ-YW-9U2"/>
+                                        <command title="Doha" id="hZD-yd-ntY"/>
+                                        <command title="Sidney" id="3cG-8n-mQB"/>
+                                        <command title="Moskova" id="Qyo-jo-VRT"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="sehir"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WOd-S1-yoz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fBW-SF-UUz" firstAttribute="leading" secondItem="WOd-S1-yoz" secondAttribute="leading" constant="280" id="6D3-zd-Ub3"/>
+                            <constraint firstItem="zBJ-Zw-BOC" firstAttribute="top" secondItem="WOd-S1-yoz" secondAttribute="top" constant="745" id="RVL-NA-8K5"/>
+                            <constraint firstItem="fBW-SF-UUz" firstAttribute="baseline" secondItem="zBJ-Zw-BOC" secondAttribute="baseline" id="Uat-XT-UWI"/>
+                            <constraint firstItem="lTf-DG-Aft" firstAttribute="top" secondItem="WOd-S1-yoz" secondAttribute="top" constant="55" id="cLr-yf-S0w"/>
+                            <constraint firstItem="lTf-DG-Aft" firstAttribute="centerX" secondItem="Yr5-hn-ZSR" secondAttribute="centerX" id="gXn-Ek-g4M"/>
+                            <constraint firstItem="lTf-DG-Aft" firstAttribute="leading" secondItem="WOd-S1-yoz" secondAttribute="leading" constant="92" id="hWc-PH-VXT"/>
+                            <constraint firstItem="zBJ-Zw-BOC" firstAttribute="leading" secondItem="fBW-SF-UUz" secondAttribute="trailing" constant="8" id="k0Z-dz-989"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z96-34-doG"/>
+                    <connections>
+                        <outlet property="addButton" destination="zBJ-Zw-BOC" id="ICi-Nd-h1P"/>
+                        <outlet property="cancelButton" destination="fBW-SF-UUz" id="72f-A4-yZ7"/>
+                        <outlet property="clockImage" destination="lTf-DG-Aft" id="fiQ-37-Xh8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pg2-78-Och" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2957.971014492754" y="54.910714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QaR-iK-dI3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bFZ-5k-i2z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k0j-xq-QUu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cB4-mI-enE" kind="relationship" relationship="rootViewController" id="Wyv-Bg-ecD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rp2-bE-vMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134.7826086956522" y="54.910714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
